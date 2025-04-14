@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  color: #3d3d3d;
+}
+
+header {
+  height: 150px;
+  box-shadow: 0px 0px 5px #3d3d3d;
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+}
+
+img {
+  object-fit: cover;
+}
+
+header img {
+  height: 150px;
+}
+
+.menuContainer > nav {
+  width: 1300px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.menuContainer > nav > div > ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menuContainer > nav > div > ul a {
+  background-color: white;
+  display: block;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+.menuContainer > nav > div > ul > li:hover > a {
+  color: #ffc500;
+}
+
+.menuContainer .productNav a {
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.menuContainer ul:hover li .productNav a {
+  height: 50px;
+}
+
+.menuContainer .productNav a {
+}
+
+.menuContainer .productNav a:hover {
+  background-color: #ffc500;
+  color: white;
+}
+
+.img-cover {
+  width: 700px;
+  height: 600px;
+  background-color: black;
+}
+
+
+
+.loadingContaienr {
+  background-color: #3d3d3d5c;
+  position: fixed;
+  inset: 0;
+  z-index: 102;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: backloading 4s forwards;
+}
+
+.loading {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 20px solid white;
+  border-left: 20px solid #ffc500;
+  animation: loading 4s forwards;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    z-index: 103;
+  }
+
+  80% {
+    opacity: 0.5;
+    visibility: visible;
+    z-index: 103;
+  }
+
+  100% {
+    transform: rotate(720deg);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+}
+
+@keyframes backloading {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    z-index: 103;
+  }
+
+  80% {
+    opacity: 0.5;
+    visibility: visible;
+    z-index: 103;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+}
+
+.about img {
+  width: 700px;
+  height: 600px;
+}
+
+.content {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.content > div {
+  margin: 200px 0;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: bold;
+  display: flex;
+  margin: 20px;
+  align-items: center;
+}
+
+.title::before {
+  content: "";
+  width: 15px;
+  height: 100px;
+  background-color: #ffc500;
+  display: block;
+  margin-right: 20px;
+}
+
+.prodcut-container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.about {
+  display: flex;
+  background-color: #ffc500;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.about-content > div {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.464);
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* 절차 */
+
+footer {
+  height: 300px;
+  box-shadow: 0 0 5px #3d3d3d;
+  display: flex;
+  text-align: center;
+}
+
+footer img {
+  width: 150px;
+  filter: grayscale(100%);
+}
+
+.contact-Nav {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+}
+
+.contact {
+  justify-content: space-around;
+  display: flex;
+  width: 1600px;
+}
+
+.footerNavContainer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 30px;
+  margin-bottom: 0;
+}
+
+.footerNavContainer > div {
+  border: 2px solid #ffc500;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.footerNavSns {
+  font-size: 30px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.who-safe {
+  display: flex;
+  flex-direction: column;
+  line-height: 50px;
+}
+
+.footerNavSns a {
+  transition: 0.3s;
+}
+
+.footerNavSns .fa:nth-child(1) a:hover {
+  color: skyblue;
+}
+
+.footerNavSns .fa:nth-child(2) a:hover {
+  color: greenyellow;
+}
+
+.footerNavSns .fa:nth-child(3) a:hover {
+  color: red;
+}
+
+.footerNavSns .fa:nth-child(4) a:hover {
+  color: #5e5eff;
+}
+
+.footerNavSns .fa:nth-child(5) a:hover {
+  color: blue;
+}

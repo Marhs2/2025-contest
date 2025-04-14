@@ -1,0 +1,403 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  color: #3d3d3d;
+  box-sizing: border-box;
+}
+
+img {
+  object-fit: cover;
+}
+
+header {
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 0 5px #3d3d3d;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.516);
+}
+
+header img {
+  width: 150px;
+}
+
+.menuContainer {
+  width: 1500px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.menuContainer > ul {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+}
+
+.menuContainer > ul > li > a {
+  height: 50px;
+  width: 150px;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.menuContainer > ul > li:hover > a {
+  color: #ffc500;
+}
+
+.prodcut-nav a {
+  display: block;
+  text-align: center;
+  width: 150px;
+  line-height: 50px;
+  font-weight: bold;
+  overflow: hidden;
+  height: 0;
+  transition: 0.3s;
+  background-color: white;
+}
+
+.prodcut-nav a:hover {
+  background-color: #ffc500;
+  color: white;
+}
+
+.menu01:hover .prodcut-nav a {
+  height: 50px;
+}
+
+/* 비디오 */
+
+.video-container {
+  position: relative;
+}
+
+.controlContainer {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.video-container > video {
+  width: 1600px;
+}
+
+.control > div,
+.hide {
+  background-color: white;
+  margin: 3px;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* 헤더 */
+
+.content {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.title::before {
+  content: "";
+  width: 20px;
+  height: 100px;
+  background-color: #ffc500;
+  display: block;
+  margin-right: 20px;
+}
+
+.sale-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.itemBox {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  box-shadow: #3d3d3d 0 0 5px;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.itemBox img,
+.itemBox .img-cover {
+  width: 250px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.item-title {
+  font-size: 20px;
+  font-weight: bold;
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: nowrap;
+}
+
+.item-pirce {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.btn > a {
+  width: 110px;
+  font-weight: bold;
+  height: 50px;
+  background-color: #ffc500;
+  color: white;
+  display: block;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.modal {
+  position: fixed;
+  background-color: #3d3d3d7a;
+  top: 0;
+  width: 100vw;
+  height: 100vw;
+  z-index: 100;
+  display: none;
+}
+
+.nonUserCart {
+  width: 150px;
+  height: 70px;
+  background-color: #ffc500;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  line-height: 70px;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.modalContainer {
+  z-index: 102;
+  width: 1400px;
+  height: 800px;
+  margin: 4% auto;
+  background-color: white;
+  position: relative;
+}
+
+.category {
+  position: absolute;
+  right: 100%;
+}
+
+.category > div {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  color: white;
+  background-color: #ffc500;
+  margin: 1px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.modal-header {
+  display: flex;
+  border: 1px solid black;
+  background-color: #ffc500;
+  height: 130px;
+  justify-content: space-between;
+}
+
+.close {
+  font-size: 30px;
+  padding: 20px;
+  width: 150px;
+  line-height: 70px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.about-user {
+  padding: 20px;
+  width: 100%;
+}
+
+.about {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.user {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.itemCart {
+  height: 600px;
+  border: 1px solid black;
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow-y: scroll;
+}
+
+.itemDrops {
+  display: flex;
+}
+
+.drop {
+  height: 600px;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+.itemCart .itemBox {
+  margin: 10px;
+  width: 350px;
+}
+
+.modalContainer .itemBox {
+  background-color: white;
+}
+
+/* 입점 */
+
+footer {
+  display: flex;
+  box-shadow: #3d3d3d 0 0 5px;
+  flex-direction: column;
+  text-align: center;
+}
+
+footer img {
+  width: 150px;
+  filter: grayscale(100%);
+}
+
+.contact-nav {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.checkOut {
+  height: 100px;
+  width: 100%;
+  background-color: #ffc500;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.TotalPrice {
+  font-size: 40px;
+  font-weight: bold;
+  background-color: white;
+  width: auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.buy-btn {
+  height: 80px;
+  background-color: white;
+  width: 250px;
+  text-align: center;
+  line-height: 80px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.footerNav,
+.contact {
+  display: flex;
+  justify-content: space-around;
+  width: 1600px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.footerNav > div {
+  border: 2px solid #ffc500;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.footerNavSns {
+  font-size: 30px;
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footerNavSns a {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footerNavSns div:nth-child(1) a:hover {
+  color: skyblue;
+}
+
+.footerNavSns div:nth-child(2) a:hover {
+  color: greenyellow;
+}
+
+.footerNavSns div:nth-child(3) a:hover {
+  color: red;
+}
+
+.footerNavSns div:nth-child(4) a:hover {
+  color: blue;
+}
+
+.footerNavSns div:nth-child(5) a:hover {
+  color: rgb(0, 102, 255);
+}
+
+.footerNavSns div {
+  font-size: 30px;
+}
+
+.who-safe {
+  line-height: 50px;
+}

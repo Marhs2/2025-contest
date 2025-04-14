@@ -1,0 +1,365 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: #3d3d3d;
+}
+
+img {
+  object-fit: cover;
+}
+
+header {
+  height: 150px;
+  box-shadow: 0 0 5px black;
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.551);
+  z-index: 10;
+}
+
+header img {
+  height: 150px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+}
+
+nav > div {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  width: 100%;
+}
+
+nav > div > ul {
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+}
+
+nav > div > ul a {
+  font-weight: bold;
+  display: block;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+li:hover > a {
+  color: #ffc500;
+}
+
+nav > div > ul a:hover {
+  color: #ffc500;
+}
+
+.prodcutNav a {
+  background-color: #ffc500;
+  color: white;
+  overflow: hidden;
+  height: 0;
+}
+
+ul:hover > li .prodcutNav a {
+  height: 50px;
+}
+
+.prodcutNav a:hover {
+  background-color: white;
+  color: #ffc500;
+  height: 50px;
+}
+
+.menu02 a {
+  border: 1px solid black;
+}
+
+/* 헤더 */
+
+.loadingContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #3d3d3d;
+  z-index: 100;
+  animation: loadingBackground 4s forwards;
+}
+
+.loading {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: white 20px solid;
+  border-left: #ffc500 20px solid;
+  animation: loading infinite 4s forwards;
+  margin: 23% 45%;
+}
+
+@keyframes loading {
+  0% {
+    z-index: 101;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  80% {
+    z-index: 101;
+    opacity: 0.5;
+    visibility: visible;
+  }
+
+  100% {
+    transform: rotate(720deg);
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes loadingBackground {
+  0% {
+    z-index: 100;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  80% {
+    z-index: 100;
+    opacity: 0.5;
+    visibility: visible;
+  }
+
+  100% {
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* 로딩 */
+
+.content {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 70px;
+  font-weight: bold;
+  color: #3d3d3d;
+  display: flex;
+  margin: 20px 10px;
+}
+
+.title::before {
+  margin-right: 30px;
+  content: "";
+  display: block;
+  background-color: #ffc500;
+  width: 20px;
+  height: 100px;
+}
+
+.about {
+  display: flex;
+  width: 1400px;
+  height: 700px;
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 100px 0;
+}
+
+.img-cover {
+  background-color: #3d3d3d;
+}
+
+.img-cover img {
+  opacity: 0.8;
+  width: 800px;
+  height: 700px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #ffc500;
+}
+
+.about-content > div {
+  color: white;
+  font-weight: bold;
+  padding: 35px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.151);
+  font-size: 17px;
+}
+
+/* 모토 */
+
+.mottoContianer {
+  display: flex;
+  gap: 10px;
+}
+
+.mottoContianer > div {
+  width: 280px;
+  height: 700px;
+  border: 1px solid black;
+  background-size: 1500px 1000px;
+  transition: 0.1s;
+  position: relative;
+}
+
+.mottoContianer div.motto01 {
+  background-image: url(../images/motto01.PNG);
+  background-position: 0px;
+}
+.mottoContianer div.motto02 {
+  background-image: url(../images/motto02.PNG);
+  background-position: -280px;
+}
+.mottoContianer div.motto03 {
+  background-image: url(../images/motto03.PNG);
+  background-position: calc(-280px * 2);
+}
+.mottoContianer div.motto04 {
+  background-image: url(../images/motto04.PNG);
+  background-position: calc(-280px * 3);
+}
+.mottoContianer div.motto05 {
+  background-image: url(../images/motto05.PNG);
+  background-position: calc(-280px * 4);
+}
+
+.mottoTitle {
+  position: absolute;
+  left: 10%;
+  bottom: 50px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #ffe079;
+  color: #3d3d3d;
+  width: 200px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.mottoDesContainer {
+  position: relative;
+  top: 50px;
+}
+
+.mottoDesContainer > div {
+  top: 0;
+  position: absolute;
+  background-color: #ffc400c3;
+  font-size: 23px;
+  color: white;
+  font-weight: bold;
+  margin: 5px;
+  text-align: justify;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.mottoDesContainer > div {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+/* 푸터 */
+
+footer {
+  height: 300px;
+  box-shadow: 0 0 5px #3d3d3d44;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-contactContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerContainer {
+  margin: 0 auto;
+  text-align: center;
+}
+.footerContainer img {
+  width: 100px;
+  height: 100px;
+  filter: grayscale(100%);
+}
+
+.contact {
+  display: flex;
+  margin: 10px;
+  align-items: center;
+}
+
+.contact div {
+  margin: 10px;
+}
+
+.footerNav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footerNav > div {
+  border: 1px solid #ffc500;
+  width: 800px;
+  text-align: center;
+  height: 50px;
+  line-height: 45px;
+  font-size: 18px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.footerSnsNav {
+  justify-content: space-around;
+  display: flex;
+}
+
+.footerSnsNav > a {
+  font-size: 35px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.footerSnsNav > a:nth-child(1):hover {
+  color: rgb(138, 229, 0);
+}
+
+.footerSnsNav > a:nth-child(2):hover {
+  color: skyblue;
+}
+
+.footerSnsNav > a:nth-child(3):hover {
+  color: red;
+}
+
+.footerSnsNav > a:nth-child(4):hover {
+  color: blue;
+}
+
+.footerSnsNav > a:nth-child(5):hover {
+  color: rgb(95, 95, 255);
+}
+.who-safe {
+  line-height: 40px;
+  font-size: 17px;
+}
